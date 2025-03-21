@@ -337,9 +337,12 @@ const Body = () => {
               </td>
               <td className="border-separate border-spacing-0.5 border border-slate-500 text-sm">
                 <button className="bg-blue-500 text-white px-4 py-2 rounded">
-                  <a href={val[1][9]} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={val[1][9] === "N/A" ? "#" : val[1][9]}
+                    target="_blank"
+                  >
                     {val[1][9] === "N/A"
-                      ? "Button Name When N/A"
+                      ? "No Website Available"
                       : "Check Website"}
                   </a>
                 </button>
